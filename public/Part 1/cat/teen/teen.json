@@ -1,0 +1,34 @@
+[
+    {
+        "title":"The Fault in Our Stars",
+        "auth":"By John Green",
+        "img": "images/tfios.jpg",
+        "description": "Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten."
+        
+    },
+    {
+        "title":"The Hunger Games",
+        "auth":"By Suzanne Collins",
+        "img": "images/hg.jpg",
+        "description": "In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. The Capitol is harsh and cruel and keeps the districts in line by forcing them all to send one boy and one girl between the ages of twelve and eighteen to participate in the annual Hunger Games, a fight to the death on live TV."
+    },
+    {
+        "title":"How to Find a Missing Girl",
+        "auth":"By Victoria Wlosok",
+        "img": "images/htfmg.jpg",
+        "description": "A year ago, beloved cheerleader Stella Blackthorn vanished without a trace. Devastated, her younger sister, Iris, launched her own investigation, but all she managed to do was scare off the police’s only lead and earn a stern warning: Once she turns eighteen, more meddling means prison-level consequences."
+        
+    },
+    {
+        "title":"The Perks of Being a Wallflower",
+        "auth":"By Stephen Chbosky",
+        "img": "images/tpoba.jpg",
+        "description": "This is the story of what it's like to grow up in high school. More intimate than a diary, Charlie's letters are singular and unique, hilarious and devastating. We may not know where he lives. We may not know to whom he is writing. All we know is the world he shares. Caught between trying to live his life and trying to run from it puts him on a strange course through uncharted territory. The world of first dates and mixed tapes, family dramas and new friends. The world of sex, drugs, and The Rocky Horror Picture Show, when all one requires is that the perfect song on that perfect drive to feel infinite."
+    }, 
+    {
+        "title":"Paper Towns",
+        "auth":"By John Green",
+        "img": "images/pt.jpg",
+        "description": "Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs into his life—dressed like a ninja and summoning him for an ingenious campaign of revenge—he follows. After their all-nighter ends, and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues—and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees the girl he thought he knew."
+    }
+]
