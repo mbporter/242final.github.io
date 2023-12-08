@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> McKinnon Porter 224 </title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+    <header id="nav">
+        <img src="../../../images/logo.png">
+        <h1>MACS BOOK EMPORIUM!!!!!!!!</h1>
+        <search>
+            <label for="book">Find a Book</label>
+            <input type="search">
+            <button type="submit">Search</button>
+        </search>
+        <div class="nestcol">
+            <a href="../../../cont/index.html"><h2>Contact us</h2></a>
+        </div>
+    </header>
+
+<div>
+    
+<marquee><h3>New Releases! Up to 20% off.New Releases! Up to 20% off.New Releases! Up to 20% off.New Releases! Up to 20% off.New Releases! Up to 20% off.New Releases! Up to 20% off.New Releases! Up to 20% off.New Releases! Up to 20% off.New Releases! Up to 20% off.New Releases! Up to 20% off.</h3></marquee>
+    <main id="main-nav">
+        
+        <div class="columns">
+            <section class="info-col1of2">
+                
+
+                <div class="nestcol">
+                    <a href="../../browse/browse.html"><h2>Browse</h2></a>
+                </div>
+
+                <div class="nestcol">
+                    <a href="../../user/user.html"><h2>User Picks</h2></a>
+                </div>
+
+                <div class="nestcol">
+                    <a href="../../genre/genre.html"><h2>Sort by Genre</h2></a>
+                </div>
+
+                <div class="nestcol">
+                    <a href="../../teen/teen.html"><h2>Teens and YA</h2></a>
+                    </div>
+            </section>
+            </div>
+
+
+
+<section id="big-ol-box">
+    <h1>Book recommendation center</h1>
+</section>
+
+
+<section id="rec">
+
+    <main>
+        <div class="main-title">
+            <h1>Books</h1>
+            <h2>Add Book</h2>
+            <a href="#" id="add-link">+</a>
+        </div>
+    </main>
+   
+    <div class="columns two-columns">
+        <div id="book-list" class="columns"></div>
+        <div id="books-details-column">
+            <div id="book-details"></div>
+        </div>
+    </div>
+
+        <div id="add-edit-book-container" class="dialog transparent">
+            <span class="close">&times;</span>
+            
+            <h3 id="title">Add Book</h3>
+            <form id="add-edit-book-form" method="post">
+                <input type="hidden" name="_id" value="-1">
+                <p> 
+                    <label for="name">Book Title: </label>
+                    <input type="text" id="name" name="name" required/>
+                </p>
+                <p>
+                    <label for="date">Release Date: </label>
+                    <input type="date" id="date" name="date" required>
+                </p>
+                <p>
+                    <label for="authenticity">Amount read: </label>
+                    <input type="number" size="6" id="authenticity" name="authenticity" min="1" max="100" value="0" required>
+                </p>
+                Book type: 
+                <p>
+                    <input type="radio" name="condition" value="new"/>
+                    <label for="new" id="new">Fantasy</label>
+                </p>
+                <p>
+                    <input type="radio" name="condition" value="ok" />
+                    <label for="ok" id="ok">Graphic</label>
+                </p>
+                <p>
+                    <input type="radio" name="condition" value="poor" />
+                    <label for="poor" id="poor">Romance</label>
+                </p>
+                <p>
+                    <label for="description">Description: </label>
+                    <textarea type="text" id="description" name="description"></textarea>
+                </p>
+                <p>
+                    <label for="img">Upload Image: </label>
+                    <input type="file" id="img" name="img" accept=".jpg, .jpeg, .png, .pdf" required >
+                </p>
+                <p>
+                    <button id="add" type="submit">Add book</button>
+                </p>
+            </form>
+
+            <section id="success-message" class="hidden">
+                <p>Your Book has been added!</p>
+            </section>
+        </div>
+    </section>
+</main>
+
+
+
+
+<footer>
+    <h2>THANK YOU FOR VISITING!!!!!!!!!!!!!!</h2>
+</footer>
+
+    </body>
+</html>

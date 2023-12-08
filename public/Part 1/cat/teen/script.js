@@ -1,7 +1,7 @@
-const { link } = require("joi");
+
 
 const getInfo = async () => {
-    const url = "url";
+    const url = "https://242final.github.io/public/Part%1/cat/teen/teen.json";
     try {
         const responce = await fetch(url);
         return await responce.json();
@@ -14,7 +14,7 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("books");
+    const infoContainer = document.getElementById("best-book");
     info.forEach((info) => {
         infoContainer.appendChild(getSelectionInfo(info));
     });
@@ -42,4 +42,4 @@ const getSelectionInfo = (info) => {
     section.appendChild(description);
 
     return section;
-}
+};
