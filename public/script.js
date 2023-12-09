@@ -51,7 +51,7 @@ const displayDetails = (book) => {
     eLink.id = "edit-link";
 
     const h3 = document.createElement("h3");
-    h3.innerHTML = `<strong>Name: </strong> ${book.name}`;
+    h3.innerHTML = `<strong>Book Title: </strong> ${book.name}`;
     bookDetails.append(h3);
 
     const date = document.createElement("p");
@@ -59,11 +59,11 @@ const displayDetails = (book) => {
     bookDetails.append(date);
 
     const authenticity = document.createElement("p");
-    authenticity.innerHTML = `<strong>Authenticity: </strong> ${book.authenticity}`;
+    authenticity.innerHTML = `<strong>Amount read: </strong> ${book.authenticity}`;
     bookDetails.append(authenticity);
 
     const condition = document.createElement("p");
-    condition.innerHTML = `<strong>Condition: </strong> ${book.condition}`;
+    condition.innerHTML = `<strong>Amount read: </strong> ${book.condition}`;
     bookDetails.append(condition);
 
     const description = document.createElement("p");
@@ -118,8 +118,8 @@ const addEditBook = async(e) => {
     e.preventDefault();
     const form =  document.getElementById("add-edit-book-form");
     const formData = new FormData(form);
-   
-    let book;
+    let response;
+    // let book;
     if(form._id.value == -1){
         formData.delete("_id");
         

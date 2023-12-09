@@ -1,13 +1,13 @@
 :root {
-  --back: #BDE3F2;
-  --hover:#5A98BF;
-  --main:#7BBADB;
-  --white: #012340;
+  --back: rgb(97, 130, 100);
+  --hover:lightskyblue;
+  --main:rgb(97, 130, 100);
+  --white: rgb(176, 217, 177);
 
 }
 
 body{
-  background-color:#085496;
+  background-color:rgb(97, 130, 100);
   font-family: Arial, Helvetica, sans-serif;
 }
 

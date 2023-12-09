@@ -1,3 +1,4 @@
+const prompt = require('prompt-sync')();
 const express = require("express");
 const app = express();
 const Joi = require("joi");
@@ -7,6 +8,22 @@ app.use(express.json());
 const cors = require("cors");
 app.use(cors());
 const mongoose = require("mongoose");
+
+
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//       cb(null, "public/images"); // Set the destination folder for uploaded images
+//     },
+//     filename: function (req, file, cb) {
+//       cb(null, file.originalname); // Set the file name to the original name of the uploaded file
+//     },
+//   });
+  
+//   const upload = multer({ storage: storage 
+// });
+  
+const upload = multer({ dest: __dirname + "/public/images" });
+
 
 
 mongoose
@@ -31,39 +48,76 @@ const bookSchema = new mongoose.Schema({
 
 const Book = mongoose.model("Book", bookSchema);
 
+app.get("/api/books", (req, res) => {
+  getBooks(res);
+});
+
+const getBooks = async (res) => {
+    const recipes = await Book.find();
+    res.send(books);
+};
+  
+
+
+
+// app.post("/api/books", upload.single(img), (req, res) => {
+//     console.log("Received POST request to /api/books");
+//     const result = validateBook(req.body);
+
+//     if (result.error) {
+//         console.log("Validation error:", result.error.details[0].message);
+//         res.status(400).send(result.error.details[0].message);
+//         return;
+//     }
+
+//     console.log("Validated input:", req.body);
+
+//     const newBook = new Book({
+//         name: req.body.name,
+//         date: req.body.date,
+//         authenticity: req.body.authenticity,
+//         condition: req.body.condition,
+//         description: req.body.description,
+//     });
+
+//     if (req.file) {
+//         newBook.img = "images/" + req.file.filename;
+//     }
+
+//     createBook(newBook, res);
+// });
+
+
 
 app.post("/api/books", upload.single("img"), (req, res) => {
-    console.log("Received POST request to /api/books");
     const result = validateBook(req.body);
-
+  
     if (result.error) {
         console.log("Validation error:", result.error.details[0].message);
         res.status(400).send(result.error.details[0].message);
         return;
     }
-
-    console.log("Validated input:", req.body);
-
-    const newBook = new Book({
+  
+    const book = new Book({
         name: req.body.name,
         date: req.body.date,
         authenticity: req.body.authenticity,
         condition: req.body.condition,
         description: req.body.description,
     });
-
+  
     if (req.file) {
-        newBook.img = "images/" + req.file.filename;
+      book.img = "images/" + req.file.filename;
     }
-
-    createBook(newBook, res);
+  
+    createBook(book, res);
 });
 
 
-const createBook = async (newBook, res) => {
-    const result = await newBook.save();
-    res.send(newBook);
-}
+const createBook = async (book, res) => {
+    const result = await book.save();
+    res.send(book);
+};
 
 app.put("/api/books/:id" , upload.single("img"), (req, res) => {
     console.log(`Received PUT request to /api/books/${req.params.id}`);
